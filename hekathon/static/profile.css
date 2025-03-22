@@ -1,0 +1,605 @@
+/* Base Styles */
+:root {
+    --primary-color: #15803d;
+    --primary-light: #22c55e;
+    --primary-dark: #166534;
+    --accent-color: #4ade80;
+    --bg-color: #f0fdf4;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --text-muted: #666666;
+    --border-color: #dcfce7;
+    --danger-color: #ef4444;
+    --warning-color: #f59e0b;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+    --radius: 8px;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  .page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  /* Header Styles */
+  .profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .profile-avatar {
+    width: 120px;
+    height: 120px;
+    background-color: var(--primary-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow);
+    animation: pulse 2s infinite;
+  }
+  
+  .profile-avatar i {
+    font-size: 3rem;
+    color: white;
+  }
+  
+  .farm-name {
+    font-size: 2.5rem;
+    color: var(--primary-dark);
+    margin-bottom: 0.5rem;
+    animation: fadeInDown 1s ease;
+  }
+  
+  .badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    animation: fadeInUp 1s ease;
+  }
+  
+  .badge {
+    background-color: var(--primary-light);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+  }
+  
+  .badge:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Tabs Navigation */
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+    animation: fadeIn 1s ease;
+  }
+  
+  .tab-btn {
+    padding: 0.75rem 1.25rem;
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: var(--radius);
+    color: var(--primary-color);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .tab-btn:hover {
+    background-color: var(--primary-light);
+    color: white;
+    transform: translateY(-3px);
+  }
+  
+  .tab-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  /* Content Area */
+  .content-area {
+    margin-bottom: 2rem;
+  }
+  
+  .tab-content {
+    display: none;
+    animation: fadeIn 0.5s ease;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }
+  
+  /* Card Styles */
+  .card {
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: var(--transition);
+    animation: slideInUp 0.5s ease;
+  }
+  
+  .card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+  }
+  
+  .card-header {
+    padding: 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .card-header h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-description {
+    font-size: 0.9rem;
+    opacity: 0.9;
+  }
+  
+  .card-content {
+    padding: 1.5rem;
+  }
+  
+  /* Info Grid */
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .info-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .info-item i {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    margin-top: 0.25rem;
+  }
+  
+  .info-label {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+  
+  .info-value {
+    color: var(--text-muted);
+  }
+  
+  /* Crops Section */
+  .crops-section {
+    margin-top: 1.5rem;
+  }
+  
+  .crops-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+  }
+  
+  .crop-badge {
+    background-color: var(--accent-color);
+    color: var(--primary-dark);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    transition: var(--transition);
+  }
+  
+  .crop-badge:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow);
+  }
+  
+  /* Certification Styles */
+  .certification-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .separator {
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 1.5rem 0;
+  }
+  
+  .compliance-section,
+  .restrictions-section {
+    margin-bottom: 1.5rem;
+  }
+  
+  .compliance-list,
+  .restrictions-list {
+    list-style: none;
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+  }
+  
+  .compliance-list li,
+  .restrictions-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .compliance-list i {
+    color: var(--primary-color);
+  }
+  
+  .restrictions-list i {
+    color: var(--danger-color);
+  }
+  
+  /* Practices Styles */
+  .practices-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .practice-item {
+    background-color: rgba(34, 197, 94, 0.05);
+    padding: 1rem;
+    border-radius: var(--radius);
+    transition: var(--transition);
+  }
+  
+  .practice-item:hover {
+    background-color: rgba(34, 197, 94, 0.1);
+    transform: translateY(-3px);
+  }
+  
+  .practice-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .practice-list {
+    list-style: none;
+    margin-left: 1.75rem;
+  }
+  
+  .practice-list li {
+    margin-bottom: 0.25rem;
+    position: relative;
+  }
+  
+  .practice-list li::before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: -1rem;
+  }
+  
+  /* Sales Styles */
+  .sales-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .sales-item {
+    background-color: rgba(34, 197, 94, 0.05);
+    padding: 1rem;
+    border-radius: var(--radius);
+    transition: var(--transition);
+  }
+  
+  .sales-item:hover {
+    background-color: rgba(34, 197, 94, 0.1);
+    transform: translateY(-3px);
+  }
+  
+  .sales-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .sales-list {
+    list-style: none;
+    margin-left: 1.75rem;
+  }
+  
+  .sales-list li {
+    margin-bottom: 0.25rem;
+    position: relative;
+  }
+  
+  .sales-list li::before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: -1rem;
+  }
+  
+  /* Challenges Styles */
+  .challenges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .challenges-item,
+  .goals-item {
+    padding: 1rem;
+    border-radius: var(--radius);
+    transition: var(--transition);
+  }
+  
+  .challenges-item {
+    background-color: rgba(239, 68, 68, 0.05);
+  }
+  
+  .goals-item {
+    background-color: rgba(34, 197, 94, 0.05);
+  }
+  
+  .challenges-item:hover,
+  .goals-item:hover {
+    transform: translateY(-3px);
+  }
+  
+  .challenges-item:hover {
+    background-color: rgba(239, 68, 68, 0.1);
+  }
+  
+  .goals-item:hover {
+    background-color: rgba(34, 197, 94, 0.1);
+  }
+  
+  .challenges-header,
+  .goals-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .challenges-list,
+  .goals-list {
+    list-style: none;
+  }
+  
+  .challenges-list li,
+  .goals-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .challenges-list i {
+    color: var(--warning-color);
+  }
+  
+  .goals-list i {
+    color: var(--primary-color);
+  }
+  
+  /* Statement Styles */
+  .statement-box {
+    background-color: rgba(34, 197, 94, 0.05);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--primary-color);
+  }
+  
+  .statement-text {
+    font-style: italic;
+    color: var(--text-muted);
+    line-height: 1.8;
+  }
+  
+  .verification-notes {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+  }
+  
+  .verification-notes h3 {
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+  }
+  
+  .verification-list {
+    list-style: none;
+  }
+  
+  .verification-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .verification-list i {
+    color: var(--primary-color);
+  }
+  
+  /* Navigation Buttons */
+  .navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  
+  .nav-btn,
+  .submit-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .nav-btn {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+  }
+  
+  .nav-btn:hover {
+    background-color: var(--primary-light);
+    color: white;
+    transform: translateY(-3px);
+  }
+  
+  .submit-btn {
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    display: none;
+  }
+  
+  .submit-btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(197, 197, 34, 0.4);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+    }
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .page-container {
+      padding: 1rem;
+    }
+  
+    .tabs {
+      flex-direction: column;
+    }
+  
+    .tab-btn {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .info-grid,
+    .certification-grid,
+    .practices-grid,
+    .sales-grid,
+    .challenges-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .navigation-buttons {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .nav-btn,
+    .submit-btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }

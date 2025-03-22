@@ -1,0 +1,431 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organic Farmer Profile</title>
+  <link rel="stylesheet" href="{% static 'profile.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page-container">
+    <header class="profile-header">
+      <div class="profile-avatar">
+        <i class="fa-solid fa-leaf"></i>
+      </div>
+      <h1 class="farm-name">Green Valley Organics</h1>
+      <div class="badges">
+        <span class="badge">✅ USDA Certified Organic</span>
+        <span class="badge">🌱 Sustainable Farming</span>
+      </div>
+    </header>
+
+    <nav class="tabs">
+      <button class="tab-btn active" data-tab="basic">Basic Info</button>
+      <button class="tab-btn" data-tab="farm">Farm Details</button>
+      <button class="tab-btn" data-tab="certification">Certification</button>
+      <button class="tab-btn" data-tab="practices">Practices</button>
+      <button class="tab-btn" data-tab="sales">Sales</button>
+      <button class="tab-btn" data-tab="challenges">Challenges & Goals</button>
+      <button class="tab-btn" data-tab="statement">Statement</button>
+    </nav>
+
+    <main class="content-area">
+      <!-- Basic Information Tab -->
+      <section class="tab-content active" id="basic">
+        <div class="card">
+          <div class="card-header">
+            <h2>Basic Information</h2>
+            <p class="card-description">Personal and contact details of the farmer</p>
+          </div>
+          <div class="card-content">
+            <div class="info-grid">
+              <div class="info-column">
+                <div class="info-item">
+                  <i class="fa-solid fa-user"></i>
+                  <div>
+                    <p class="info-label">Full Name</p>
+                    <p class="info-value">John Smith</p>
+                  </div>
+                </div>
+                
+                <div class="info-item">
+                  <i class="fa-solid fa-calendar"></i>
+                  <div>
+                    <p class="info-label">Age</p>
+                    <p class="info-value">45 years</p>
+                  </div>
+                </div>
+                
+                <div class="info-item">
+                  <i class="fa-solid fa-user"></i>
+                  <div>
+                    <p class="info-label">Gender</p>
+                    <p class="info-value">Male</p>
+                  </div>
+                </div>
+                
+                <div class="info-item">
+                  <i class="fa-solid fa-calendar"></i>
+                  <div>
+                    <p class="info-label">Years of Experience</p>
+                    <p class="info-value">15 years</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="info-column">
+                <div class="info-item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <div>
+                    <p class="info-label">Location</p>
+                    <p class="info-value">United States, California, Sonoma, 123 Farm Road</p>
+                  </div>
+                </div>
+                
+                <div class="info-item">
+                  <i class="fa-solid fa-phone"></i>
+                  <div>
+                    <p class="info-label">Phone</p>
+                    <p class="info-value">+1 (555) 123-4567</p>
+                  </div>
+                </div>
+                
+                <div class="info-item">
+                  <i class="fa-solid fa-envelope"></i>
+                  <div>
+                    <p class="info-label">Email</p>
+                    <p class="info-value">john@greenvalleyorganics.com</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Farm Details Tab -->
+      <section class="tab-content" id="farm">
+        <div class="card">
+          <div class="card-header">
+            <h2>Farm Details</h2>
+            <p class="card-description">Information about the farm and its operations</p>
+          </div>
+          <div class="card-content">
+            <div class="info-grid">
+              <div class="info-item">
+                <i class="fa-solid fa-leaf"></i>
+                <div>
+                  <p class="info-label">Total Farm Area</p>
+                  <p class="info-value">25 acres</p>
+                </div>
+              </div>
+              
+              <div class="info-item">
+                <i class="fa-solid fa-droplet"></i>
+                <div>
+                  <p class="info-label">Soil Type & pH Level</p>
+                  <p class="info-value">Loamy soil, pH 6.8</p>
+                </div>
+              </div>
+              
+              <div class="info-item">
+                <i class="fa-solid fa-cloud-rain"></i>
+                <div>
+                  <p class="info-label">Irrigation System</p>
+                  <p class="info-value">Drip irrigation, Rainwater harvesting</p>
+                </div>
+              </div>
+              
+              <div class="info-item">
+                <i class="fa-solid fa-paw"></i>
+                <div>
+                  <p class="info-label">Livestock</p>
+                  <p class="info-value">Free-range chickens, Dairy cows</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="crops-section">
+              <div class="info-item">
+                <i class="fa-solid fa-seedling"></i>
+                <p class="info-label">Organic Crops Grown</p>
+              </div>
+              <div class="crops-badges">
+                <span class="crop-badge">Tomatoes</span>
+                <span class="crop-badge">Lettuce</span>
+                <span class="crop-badge">Carrots</span>
+                <span class="crop-badge">Kale</span>
+                <span class="crop-badge">Strawberries</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certification Tab -->
+      <section class="tab-content" id="certification">
+        <div class="card">
+          <div class="card-header">
+            <h2>Organic Certification & Compliance</h2>
+            <p class="card-description">Details about organic certification and compliance standards</p>
+          </div>
+          <div class="card-content">
+            <div class="certification-grid">
+              <div class="info-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                  <p class="info-label">Certified Organic</p>
+                  <p class="info-value">Yes</p>
+                </div>
+              </div>
+              
+              <div class="info-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                  <p class="info-label">Certification Authority</p>
+                  <p class="info-value">USDA Organic</p>
+                </div>
+              </div>
+              
+              <div class="info-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                  <p class="info-label">Certification Number</p>
+                  <p class="info-value">USDA-ORG-2023-7890</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="separator"></div>
+            
+            <div class="compliance-section">
+              <div class="info-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <p class="info-label">Compliance with:</p>
+              </div>
+              <ul class="compliance-list">
+                <li><i class="fa-solid fa-circle-check"></i> No chemical pesticides, herbicides, or synthetic fertilizers</li>
+                <li><i class="fa-solid fa-circle-check"></i> No genetically modified organisms (GMOs)</li>
+                <li><i class="fa-solid fa-circle-check"></i> Crop rotation and biodiversity maintenance</li>
+                <li><i class="fa-solid fa-circle-check"></i> Sustainable and eco-friendly waste management</li>
+                <li><i class="fa-solid fa-circle-check"></i> Adherence to government-approved organic standards</li>
+              </ul>
+            </div>
+            
+            <div class="restrictions-section">
+              <div class="info-item">
+                <i class="fa-solid fa-circle-xmark"></i>
+                <p class="info-label">Strict Restrictions for Government Verification:</p>
+              </div>
+              <ul class="restrictions-list">
+                <li><i class="fa-solid fa-circle-xmark"></i> No synthetic additives, artificial colors, or preservatives in farm products</li>
+                <li><i class="fa-solid fa-circle-xmark"></i> No synthetic growth hormones or antibiotics in livestock farming</li>
+                <li><i class="fa-solid fa-circle-xmark"></i> No unapproved hybrid or genetically engineered seeds</li>
+                <li><i class="fa-solid fa-circle-xmark"></i> No chemical fumigation of storage or crops</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Practices Tab -->
+      <section class="tab-content" id="practices">
+        <div class="card">
+          <div class="card-header">
+            <h2>Sustainable & Eco-Friendly Farming Practices</h2>
+            <p class="card-description">Details about the sustainable farming methods used</p>
+          </div>
+          <div class="card-content">
+            <div class="practices-grid">
+              <div class="practice-item">
+                <div class="practice-header">
+                  <i class="fa-solid fa-seedling"></i>
+                  <p class="info-label">Fertilizers Used</p>
+                </div>
+                <ul class="practice-list">
+                  <li>Compost</li>
+                  <li>Vermicompost</li>
+                  <li>Bio-fertilizers</li>
+                </ul>
+              </div>
+              
+              <div class="practice-item">
+                <div class="practice-header">
+                  <i class="fa-solid fa-bug"></i>
+                  <p class="info-label">Pest Control Methods</p>
+                </div>
+                <ul class="practice-list">
+                  <li>Neem extract</li>
+                  <li>Biopesticides</li>
+                  <li>Crop Rotation</li>
+                  <li>Beneficial insects</li>
+                </ul>
+              </div>
+              
+              <div class="practice-item">
+                <div class="practice-header">
+                  <i class="fa-solid fa-cloud-rain"></i>
+                  <p class="info-label">Water Conservation</p>
+                </div>
+                <ul class="practice-list">
+                  <li>Rainwater Harvesting</li>
+                  <li>Drip Irrigation</li>
+                  <li>Mulching</li>
+                </ul>
+              </div>
+              
+              <div class="practice-item">
+                <div class="practice-header">
+                  <i class="fa-solid fa-sun"></i>
+                  <p class="info-label">Renewable Energy Usage</p>
+                </div>
+                <ul class="practice-list">
+                  <li>Solar Panels</li>
+                  <li>Wind Energy</li>
+                </ul>
+              </div>
+              
+              <div class="practice-item">
+                <div class="practice-header">
+                  <i class="fa-solid fa-recycle"></i>
+                  <p class="info-label">Waste Management</p>
+                </div>
+                <ul class="practice-list">
+                  <li>Zero Waste</li>
+                  <li>Composting</li>
+                  <li>Biogas</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sales Tab -->
+      <section class="tab-content" id="sales">
+        <div class="card">
+          <div class="card-header">
+            <h2>Market & Sales Channels</h2>
+            <p class="card-description">Information about how and where products are sold</p>
+          </div>
+          <div class="card-content">
+            <div class="sales-grid">
+              <div class="sales-item">
+                <div class="sales-header">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <p class="info-label">Local Distribution</p>
+                </div>
+                <ul class="sales-list">
+                  <li>Farmers' markets</li>
+                  <li>Organic stores</li>
+                  <li>CSA programs</li>
+                </ul>
+              </div>
+              
+              <div class="sales-item">
+                <div class="sales-header">
+                  <i class="fa-solid fa-box"></i>
+                  <p class="info-label">Wholesale Supply</p>
+                </div>
+                <ul class="sales-list">
+                  <li>Partnerships with organic brands</li>
+                  <li>Local restaurants</li>
+                  <li>Schools</li>
+                </ul>
+              </div>
+              
+              <div class="sales-item">
+                <div class="sales-header">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <p class="info-label">E-Commerce Presence</p>
+                </div>
+                <ul class="sales-list">
+                  <li>Own website</li>
+                  <li>Amazon</li>
+                  <li>Specialized organic marketplaces</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Challenges Tab -->
+      <section class="tab-content" id="challenges">
+        <div class="card">
+          <div class="card-header">
+            <h2>Challenges & Future Goals</h2>
+            <p class="card-description">Current challenges and future aspirations</p>
+          </div>
+          <div class="card-content">
+            <div class="challenges-grid">
+              <div class="challenges-item">
+                <div class="challenges-header">
+                  <i class="fa-solid fa-circle-exclamation"></i>
+                  <p class="info-label">Challenges Faced in Organic Farming</p>
+                </div>
+                <ul class="challenges-list">
+                  <li><i class="fa-solid fa-circle-exclamation"></i> High certification costs</li>
+                  <li><i class="fa-solid fa-circle-exclamation"></i> Pest control without chemicals</li>
+                  <li><i class="fa-solid fa-circle-exclamation"></i> Market competition with non-organic products</li>
+                  <li><i class="fa-solid fa-circle-exclamation"></i> Limited government support</li>
+                </ul>
+              </div>
+              
+              <div class="goals-item">
+                <div class="goals-header">
+                  <i class="fa-solid fa-bullseye"></i>
+                  <p class="info-label">Future Plans</p>
+                </div>
+                <ul class="goals-list">
+                  <li><i class="fa-solid fa-bullseye"></i> Expansion of organic farmland</li>
+                  <li><i class="fa-solid fa-bullseye"></i> Introduction of new organic crops/products</li>
+                  <li><i class="fa-solid fa-bullseye"></i> Sustainable packaging solutions</li>
+                  <li><i class="fa-solid fa-bullseye"></i> Obtaining global organic certifications</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Statement Tab -->
+      <section class="tab-content" id="statement">
+        <div class="card">
+          <div class="card-header">
+            <h2>Farmer's Statement</h2>
+            <p class="card-description">Personal commitment to organic farming</p>
+          </div>
+          <div class="card-content">
+            <div class="statement-box">
+              <p class="statement-text">"I, John Smith, am dedicated to organic farming, ensuring sustainable and chemical-free food production. My mission is to provide consumers with 100% authentic organic produce while protecting the environment for future generations."</p>
+            </div>
+            
+            <div class="verification-notes">
+              <h3>Government Verification & Website Integration Notes</h3>
+              <ul class="verification-list">
+                <li><i class="fa-solid fa-circle-check"></i> All documents, certifications, and proof of compliance should be attached.</li>
+                <li><i class="fa-solid fa-circle-check"></i> Government verification requires lab test reports of soil and produce.</li>
+                <li><i class="fa-solid fa-circle-check"></i> For a website profile, include high-quality images of the farm, farmer, crops, and livestock.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="navigation-buttons">
+      <button id="prev-btn" class="nav-btn"><i class="fa-solid fa-arrow-left"></i> Previous</button>
+      <button id="next-btn" class="nav-btn">Next <i class="fa-solid fa-arrow-right"></i></button>
+      <button id="submit-btn" class="submit-btn">Submit for Verification</button>
+    </div>
+  </div>
+
+  <script src="{% static  'profile.js'%}"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+ {% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Products</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'products.css'%}">
+    </head>
+    <body>
+        <div id="header-container">
+            <div class="logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Ministry_of_Agriculture_India.svg"
+                    height="95.89%" width="95.89%">
+            </div>
+        </div>
+    
+        <!-- Header Container 1 -->
+        <div id="header-container1">
+            <div id="title">Farming Company</div>
+            <div id="nav">
+                <a href="#" class="current" onclick="homeURL();">HOMES</a>
+                <a href="#" onclick="aboutURL();">ABOUT</a>
+                <a href="#" onclick="productURL();">PRODUCTS</a>
+                <a href="#" onclick="blogURL();">BLOG</a>
+                <a href="#" onclick="contactURL();">CONTACT</a>
+            </div>
+        </div>
+
+        <div id="title-h1">
+            <h2>Our Product</h2>
+        </div> 
+    
+        <div class="slides">
+            <div class="slide slide-1">
+              <img
+                src="{%static 'img/fruit.jpg'%}"
+                alt=""
+              />
+            </div>
+      
+            <div class="slide slide-2">
+              <img src="{%static 'img/livestock2.jpg'%}" />
+            </div>
+            <div class="slide slide-3">
+              <img
+                src="{% static 'img/weat.jpg'%}"
+                alt=""
+              />
+            </div>
+            <div class="slide slide-4">
+              <img
+                src="C:\Users\Dhruv\OneDrive\Desktop\project\img\protein.jpg"
+                alt=""
+              />
+            </div>
+        </div>
+        <div id="footer-container1">
+            <h1 class="foooter-h1">Contact Us</h1>
+            <input class="input" type="text" name="text" placeholder="Full Name"  />
+            <input class="input" type="text" name="Email" placeholder="Email"  />
+            <input class="input" type="number" name="number" placeholder="Phone Number"  />
+            <div>
+                <textarea class="textarea"  name="message" placeholder="Message" Message="Name"></textarea>
+                <input class="button" type="button" value="Send" >
+                <!-- <button type="button" value="Send"></button> -->
+            </div>
+            <div id="header1">
+                <div class="ftitle1">
+                    <h1>Why Us</h1>
+                    <ul>
+                        <li>Reasonable Fee Structure</li>
+                        <li>Well Designed Course Structure</li>
+                        <li>Expert Faculties</li>
+                        <li>100% Placement Assistance</li>
+                    </ul>
+                </div>
+                <div class="ftitle2">
+                    <h1>Address</h1>
+                    <ul>
+                        <li>Vastrapur-Subhash Bridge</li>
+                        <li>Mobile 91-9904080166</li>
+                        <li>Email:</li>
+                        <li>contact@geniuscomputer.in</li>
+                    </ul>
+                </div>
+                <div class="ftitle3">
+                    <h1>Follow Us</h1>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Youtube</li>
+                        <li>about.me</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div id="footer">
+                <div class="logo1">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Ministry_of_Agriculture_India.svg" height="68px" width="1500px">
+                </div>
+            </div>
+        </div>
+        <script src="{static 'product.js
+        '}" async defer></script>
+    </body>
+</html>
